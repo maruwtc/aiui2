@@ -5,7 +5,6 @@ const Markdown = ({ message }: { message: any }) => {
     const isAssistant = message.role === 'assistant';
 
     const components = {
-        // Style code blocks
         code({ node, inline, className, children, ...props }: any) {
             return (
                 <code
@@ -47,12 +46,12 @@ const Markdown = ({ message }: { message: any }) => {
 
     return (
         <div className={`flex gap-3 ${isAssistant ? 'flex-row' : 'flex-row-reverse'} group`}>
-            <div className="flex flex-col gap-1 max-w-[80%]">
+            <div className="flex flex-col gap-1 max-w-[100%]">
                 <div
-                    className={`rounded-2xl py-3 px-4
+                    className={`rounded-2xl px-4
             ${isAssistant
                             ? 'bg-white dark:bg-gray-800'
-                            : 'bg-zinc-200 dark:bg-zinc-900/50 text-black dark:text-white'
+                            : 'bg-zinc-200 dark:bg-zinc-900/50 text-black dark:text-white py-3'
                         }`}
                 >
                     <div className="prose prose-sm dark:prose-invert max-w-none">
