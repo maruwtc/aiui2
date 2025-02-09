@@ -155,7 +155,7 @@ const AIChatbox = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     // Check system preference
@@ -393,13 +393,13 @@ const AIChatbox = () => {
                 </Button>
               )}
               <form onSubmit={handleSubmit} className="relative">
-                <Input
+                <textarea
                   ref={inputRef}
-                  type="text"
                   placeholder="Type your message..."
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  className="w-full pr-12 py-3 rounded-xl bg-white dark:bg-gray-900 border-gray-100 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent min-h-[5rem]"
+                  className="w-full pr-12 pt-3 pb-3 px-4 rounded-xl bg-white dark:bg-gray-900 border-gray-100 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent min-h-[5rem] resize-none align-top"
+                  style={{ alignItems: 'flex-start' }}
                 />
                 <Button
                   type="submit"
