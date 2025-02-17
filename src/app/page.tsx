@@ -61,7 +61,7 @@ const Sidebar = ({ isOpen, onClose, isDark, onToggleTheme }: {
   return (
     <Card className={`h-full shadow-lg flex flex-col ${isOpen ? 'block' : 'hidden'} lg:block
       dark:bg-gray-800 dark:border-gray-700`}>
-      <div className="p-4 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
+      <div className="p-5 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
         <h2 className="text-xl font-semibold text-blue-500 dark:text-blue-400 flex items-center gap-2">
           <Bot />
           AI Chat
